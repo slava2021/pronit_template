@@ -1,0 +1,1050 @@
+/* start add local fonts */
+@font-face{
+    font-family: 'roboto';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff'),
+         url('../fonts/roboto-light-webfont.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'roboto';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'roboto';
+    src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff'),
+         url('../fonts/roboto-bold-webfont.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+
+}
+.header{
+    background-color: #E2E6EA;
+    min-width: 1140px;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    /* border-bottom: 1px solid silver; */
+}
+.header-wrap{
+    max-width: 1140px;
+    height: 70px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px 0 0 0; */
+}
+.logo{
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+.header-main-menu{
+    height: 50px;
+}
+.header-main-menu button
+{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    margin: 0 24px 0 0;
+    padding: 0 0 10px 0;
+}
+.header-main-menu button:active
+{
+    color:red;
+}
+
+/* drop down menu */
+ul {
+    list-style: none;
+}
+.header-wrap{
+    position: relative;
+}
+.menu > li
+ {
+    float: left;
+}
+.menu button
+{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+.menu button:hover,
+.menu button:focus
+ {
+    outline: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.submenu {
+    overflow:hidden;
+    height:0;
+    margin:0;
+    position: absolute;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    z-index: 100;
+}
+.submenu li{
+    padding: 10px;
+}
+.menu button span:hover{
+    color: #0A66DF;
+    border-bottom:3px solid #0A66DF;
+}
+.dropbtn span:hover{
+    color: #0A66DF;
+}
+.dropbtn span:active{
+    color: red;
+}
+.menu button span:active
+{
+    color:red;
+    border-bottom:3px solid red;
+    box-sizing: border-box;
+}
+.menu button:focus + .submenu,
+.submenu:hover
+{
+    display: block;
+    /* background-color: #CED4DA; */
+    background-color: #fff;
+    /* border: 1px solid #E8E8E8; */
+    width: 1140px;
+    height: 300px;
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    box-sizing: border-box;
+    /* margin-top: 13px; */
+    transition: all 0.4s ease-in-out;
+    -webkit-box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow:    -1px 6px 6px 0px rgba(0, 0, 0, 0.15);
+    box-shadow:         -1px 6px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.close-block{
+    cursor: pointer;
+
+}
+.close{
+    overflow: hidden;
+    position: absolute;
+    top:10px;
+    right: -10px;
+}
+.close:after{
+    content: "\f00d";
+    font-family: 'Font Awesome 5 Free';
+    color: red;
+    margin-left: 6px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.menu-title {
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+    cursor: pointer;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    text-decoration: none;
+}
+
+/* end drop down menu */
+/* Lang select style */
+
+.dropbtn {
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    overflow: hidden;
+    position: absolute;
+    padding: 4px;
+    margin: 0;
+    z-index: -100;
+    width: 140px;
+    border: none;
+}
+
+.dropbtn
+{
+  /* background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center; */
+  padding-left: 0px;
+  width: 40px;
+  box-sizing: border-box;
+}
+
+.dropdown-content a:first-child
+{
+  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
+}
+
+.dropdown-content a:last-child
+{
+  background: url('https://icons.iconarchive.com/icons/fatcow/farm-fresh/16/flag-usa-icon.png') no-repeat left center;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+    display: block;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropbtn:focus + .dropdown-content, 
+.dropdown-content:hover {
+    overflow: visible;
+    display: block;
+    /* background-color: #CED4DA; */
+    background-color: #fff;
+    /* border: 1px solid #E8E8E8; */
+    z-index: 100;
+    transition: all 0.4s ease-in-out;
+    -webkit-box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow:    -1px 6px 6px 0px rgba(0, 0, 0, 0.15);
+    box-shadow:         -1px 6px 6px 0px rgba(0, 0, 0, 0.15);
+}
+.dropbtn:active{
+    color: red;
+}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+/* End language select */
+.header-login-link:hover{
+    color: #0A66DF;
+}
+.header-login-link:active{
+    color: red;
+}
+
+
+
+.arrow-menu:after {
+    content: "\f0d7";
+    /* content: "\f107"; добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #000;
+    margin-left: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    width: 16px;
+    box-sizing: border-box;
+    }
+
+.header-language a{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    text-decoration: none;
+}
+.header-language:before{
+    content: "\f0ac"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #000;
+    margin-left: 4px;
+    font-size: 16px;
+    font-weight: 700; 
+}
+.header-language:after{
+    content: "\f0d7"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #000;
+    margin-left: 2px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.header-serch-input{
+    border: 1px solid #CED4DA;
+    width: 170px;
+    height: 40px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-decoration: none;
+    color: silver;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+}
+.header-serch-input:hover{
+    border-color: #0A66DF;
+}
+.header-serch-input:focus{
+    outline: none;
+    box-shadow: 0 0 0 1px lightskyblue;
+    /* border: 1px solid red; */
+}
+.header-serch-submit{
+    border: 1px solid #CED4DA;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-decoration: none;
+    color: silver;
+    text-decoration: none;
+    width: 70px;
+    height: 40px;
+    background-color: #fff;
+}
+.header-login a{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    text-decoration: none;
+}
+.header-login a:after{
+    content: "\f007"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #000;
+    margin-left: 4px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* main container */
+
+.main{
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+.main-product{
+    margin: 0 auto;
+    width: 1140px;
+    height:500px;
+    display: flex;
+    padding: 0px 0 0 0;
+}
+.main-product-carusel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    width: 940px;
+    padding: 0 10px 0 0;
+    background-color: #fff;
+}
+.main-product-carusel>div{
+width: 300px;
+height: 400px;
+background-color: #CED4DA;
+}
+.main-product-container, .main-news-block{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.main-product-header{
+    width: 200px;
+    padding: 0px 0 0 6px;
+}
+.main-h1{
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    text-decoration: none;
+}
+.main-product-more{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-decoration: none;
+    color: #0A66DF;
+    text-decoration: none;
+    padding: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+.main-product-more:after{
+    /* content: "\f061"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #0A66DF;
+    margin-left: 4px;
+    font-size: 12px;
+    font-weight: 700; */
+}
+.main-product-title{
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.main-product-text{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px; 
+}
+.arrow-blue{
+    padding: 10px 0px 0px 10px;
+    color: #0A66DF;
+}
+.arrow-more{
+    padding: 0 0 0 6px;
+}
+.main-product-navi{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+}
+.main-product-navi-pages{
+    display: block;
+    width: 50px;
+    height: 10px;
+    background-color: #CED4DA;
+    margin: 10px;
+    border-radius: 10px;
+}
+.active-link{
+    background-color: #0A66DF;
+}
+.main-product-navi-pages:hover{
+    background-color: #0A66DF;
+    cursor: pointer;
+}
+.main-product-navi-pages:active{
+    background-color: red;
+}
+.main-news{
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+    background-color: #E2E6EA;
+    box-sizing: border-box;
+    display: block;
+}
+.main-news-container-1{
+    background-color: #E2E6EA;
+    width: 1140px;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    box-sizing: border-box;
+}
+.main-news-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 940px;
+    padding: 0 10px 0 0;
+}
+.main-news-block{
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+}
+.main-news-img{
+    position: relative;
+}
+.main-news-date{
+    background-color: #CED4DA;
+    position: absolute;
+    padding: 4px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    text-decoration: none;
+    color: #000;
+}
+/* News nav buttons */
+.news-nav{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.news-nav-arr-left:before{
+    content: "\f104"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    background-color: #0A66DF;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px;
+}
+.news-nav-arr-left, .new-nav-arr-right{
+    text-decoration: none;
+}
+.news-nav-arr-right:after{
+    content: "\f105"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    background-color: #0A66DF;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px;
+}
+.news-nav-text{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    padding: 0 4px 0 4px;
+}
+/* End News nav buttons */
+.main-partners{
+    display: flex;
+    flex-flow:column;
+    margin: 0 auto;
+    padding: 0 0 0 200px;
+    box-sizing: border-box;
+    width: 1140px;
+    height: 545px;
+    background-image: url('../images/Subtraction_14.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:#000;
+    opacity: 0.8;
+}
+.main-partners-h1{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 4px 20px 4px;
+    margin: 0;
+    opacity: 0.8;
+}
+.main-partners-img{
+    padding: 0 0 200px 0;
+}
+.main-partners-text{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 4px 30px 4px;
+    margin: 0;
+    opacity: 0.8;
+    width: 340px;
+}
+.main-partners-link{
+    display: flex;
+    align-items: center;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    width: 250px;
+    height: 40px;
+    background-color: #0A66DF;
+    padding: 0 0 0px 10px;
+}
+.main-partners-link span{
+    width: 250px;
+}
+.main-partners-link span:after{
+    content: "\f061"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    background-color: #0A66DF;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 0 0 120px;
+}
+
+.bottom{
+    min-width: 1140px;
+    height: 500px;
+    background-color: #5A6268;
+}
+.bottom-container{
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bottom-h1{
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+.bottom-fam{
+    margin: 0 20px 0 0;
+}
+.bottom-links{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    color: #CED4DA;
+}
+.bottom-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.bottom-list li{
+    padding: 0 0 10px 0;
+}
+.bottom-recent{
+    margin: 0 400px 0 0;
+}
+.bottom-mail, .bottom-recent, .bottom-fam{
+    margin:0 0 270px 0
+}
+.bottom-mail-form{
+    border-top: 1px solid #CED4DA;
+    padding: 10px 0 0 0;
+}
+.bottom-mail-label{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    color: #CED4DA;
+}
+.bottom-mail-form-text{
+    border: 1px solid #CED4DA;
+    width: 270px;
+    height: 39px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-decoration: none;
+    color: silver;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+}
+.bottom-mail-form-text:hover{
+    border-color: #0A66DF;
+}
+.bottom-mail-form-text:focus{
+    outline: none;
+    box-shadow: 0 0 0 1px lightskyblue;
+    /* border: 1px solid red; */
+}
+.bottom-mail-form-submit{
+    width: 130px;
+    height: 40px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+}
+.bottom-rights{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #CED4DA;
+}
+.bottom-rights-link{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #E8E8E8;
+    margin: 0 10px 0 0;
+
+}
+
+/* products */
+.main-product-container-another{
+    width: 1140px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+}
+.main-product-menu{
+    width:200px;
+    box-sizing: border-box;
+}
+.main-product-container-prev{
+    width: 940px;
+    margin: 0;
+    padding: 10px 0 0 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main-product-another{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+    padding: 10px 10px 0 10px;
+    margin: 0 0 10px 0;
+}
+
+.main-product-another:hover,
+.main-product-container:hover,
+.main-news-block:hover
+{
+        -webkit-box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.15);
+        
+}
+.main-product-link{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    align-self: flex-end;
+}
+.main-product-header-another{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #000;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+}
+.main-product-prev{
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    color: #000;
+    margin: 0 auto;
+    padding: 0px 0 0 10px;
+    width: 120px;
+}
+.main-product-icon-prep,
+.main-product-icon-dsg,
+.main-product-icon-tst,
+.main-product-icon-kcss{
+    width: 100%;
+    text-align: center;
+}
+.main-product-icon-prep:after{
+    content: "\f013"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: red;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    text-align: center;
+    opacity: 0.2;
+}
+.main-product-icon-dsg:after{
+    content: "\f09d"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: green;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    text-align: center;
+    opacity: 0.2;
+}
+.main-product-icon-tst:after{
+    content: "\f5fc"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: blue;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    text-align: center;
+    opacity: 0.2;
+}
+.main-product-icon-kcss:after{
+    content: "\f3ed"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: orange;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    text-align: center;
+    opacity: 0.2;
+}
+
+.main-product-text-another{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #000;
+    margin: 0 auto;
+    padding: 0px 0 0 10px;
+    width: 240px;
+}
+.main-product-link-more{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #0A66DF;
+    text-decoration: none;
+    padding: 10px;
+}
+.main-product-link-more:after{
+    content: "\f061"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #0A66DF;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+}
+
+.main-product-link-cost{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 10px 4px 10px;
+    background-color: #0A66DF ;
+}
+.main-product-link-cost:after{
+    content: "\f105"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #fff;
+    background-color: #0A66DF;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+}
+.main-product-more-another{
+    width: 620px;
+    height: 300px;
+    background-color: #5A6268;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+.main-product-more-link{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 10px 4px 10px;
+}
+.main-product-more-link:after{
+    content: "\f105"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+}
+
+.main-product-mail{
+    position: relative;
+    width: 1140px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-end;
+    position: relative;
+}
+.main-product-mail-block{
+    width: 940px;
+    height: 370px;
+    background-color: #E2E6EA;
+    margin: 0 0 10px 0;
+    box-sizing: border-box;
+}
+.main-product-mail-block-header{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #000;
+    width: 305px;
+    padding: 0 0 0 20px;
+}
+.main-product-mail-block-text{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #000;
+    width: 470px;
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.main-product-mail-img{
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+}
+.line{
+    border-bottom: 1px solid #CED4DA;
+    width: 470px;
+    height: 1px;
+}
+.main-product-contactus{
+background-color: #22282D;
+width: 1140px;
+height: 160px;
+margin: 0 auto;
+display: flex;
+}
+
+.main-product-contactus-header{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 0 10px 10px;
+    margin: 0;
+}
+.main-product-contactus-text,
+.main-product-contactus-text1{
+    width: 300px;
+    height: 100px;
+    background-color: #303A43;
+}
+.main-product-contactus-text{
+    margin: 30px 0 0 330px;
+}
+.main-product-contactus-text1{
+    margin: 30px 0 0 1px;
+}
+.main-product-contactus-header2,
+.main-product-contactus-header3{
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #CED4DA;
+    margin: 0;
+    padding: 4px 0 0 8px; 
+}
+.main-product-contactus-header2:after{
+    content: "\f095"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #CED4DA;
+    font-size: 14px;
+    font-weight: 700;
+    left: 100px;
+    position: relative;
+}
+.main-product-contactus-header3:after{
+    content: "\f0e0"; /* добавляем иконку корзина */
+    font-family: 'Font Awesome 5 Free';
+    color: #CED4DA;
+    font-size: 14px;
+    font-weight: 700;
+    left: 100px;
+    position: relative;
+}
+.main-product-contactus-list{
+  list-style: none;
+  font-family: 'roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  color: #CED4DA;
+  margin: 0;
+  padding: 10px 0 0 20px;
+}
